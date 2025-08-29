@@ -1,0 +1,11 @@
+{
+  "name": "com.wully.bassdk-extensions",
+  "version": "1.0.0",
+  "displayName": "Blade and Sorcery SDK Extensions",
+  "description": "Additional tools and extensions for the Blade and Sorcery SDK to enhance your modding experience.",
+  "unity": "2021.3",
+  "author": {
+    "name": "Wully",
+    "url": "https://github.com/Wully616"
+  }
+}

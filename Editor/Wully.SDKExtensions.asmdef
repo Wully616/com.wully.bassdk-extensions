@@ -1,0 +1,21 @@
+{
+    "name": "Wully.SDKExtensions",
+    "rootNamespace": "Wully",
+    "references": [
+        "GUID:e653bc590854a5244a0cfe829a7fbbe2",
+        "GUID:270d048a808d7de489542fd0df53923c",
+        "GUID:0c8d3c58800556341a36d8a3180ad721",
+        "GUID:ca960c18b38b1cf4eb871ec2a9703929"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
