@@ -12,8 +12,22 @@ namespace Wully
         [UnityEditor.MenuItem("ThunderRoad (SDK)/Extensions/Set Build mode to Nomad (Android)", priority = 999)]
         public static void SetAndroidQualityAndPlatform()
         {
-            //check if the platform is already set to android
-            
+            // check if the android build support is installed
+            if (!UnityEditor.BuildPipeline.IsBuildTargetSupported(UnityEditor.BuildTargetGroup.Android, UnityEditor.BuildTarget.Android))
+            {
+                //display dialog to inform the user that the android build support is not installed
+                if(UnityEditor.EditorUtility.DisplayDialog("Android Build Support Not Installed",
+                        "Android Build Support is not installed. Please install it via the Unity Hub. \nDo you want to open the download page in your browser?",
+                        "Yes", "No"))
+                {
+                    //Get this unity version
+                    string url = $"https://unity.com/releases/editor/whats-new/{Application.unityVersion}#installers";
+                    Application.OpenURL(url);
+                }
+                
+                Debug.LogWarning($"Android Build Support is not installed. Please install it via the Unity Hub.");
+                return;
+            }
             //show an editor dialog to confirm the action
             if (!UnityEditor.EditorUtility.DisplayDialog("Set Android Quality and Platform",
                     "This will set the quality to Android and switch the build platform to Android. \nAre you sure you want to proceed?\n It can take a while to switch the platform for the first time",
